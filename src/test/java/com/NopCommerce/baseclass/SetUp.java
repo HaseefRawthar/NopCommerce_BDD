@@ -33,16 +33,14 @@ public class SetUp {
 	public void start()
 	{
 		try {
-		 //System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
-			/*
-			 * ChromeOptions options = new ChromeOptions();
-			 * 
-			 * options.addArguments("--no-sandbox"); options.addArguments("--headless");
-			 * options.addArguments("--disable-dev-shm-usage");
-			 * options.addArguments("--window-size=1920x1080"); driver = new
-			 * ChromeDriver(options);
-			 */
-		 driver = new ChromeDriver();
+		 ChromeOptions options = new ChromeOptions();
+			  
+			  options.addArguments("--no-sandbox"); options.addArguments("--headless");
+			  options.addArguments("--disable-dev-shm-usage");
+			  options.addArguments("--window-size=1920x1080"); driver = new
+			  ChromeDriver(options);
+			 
+		// driver = new ChromeDriver();
 	     driver.manage().window().maximize();
 	    
 	     log.info("Page opened");
